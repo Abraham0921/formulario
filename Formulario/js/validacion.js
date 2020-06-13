@@ -20,15 +20,15 @@ function validar(formulario) {
         for (var j = 0; j < checkOk.length; j++)
             if (ch == checkOk.charAt(j))
                 break;
-        if (j == checkOk.length) {}
-        allValid = false;
+        if (j == checkOk.length)
+            allValid = false;
         break;
-    }
 
-}
-//saber estado de valid
-if (!allValid) {
-    alert("Escriba letras en el formulario de Nombre");
-    formulario.nombre.focus();
-    return false;
+    }
+    //saber estado de valid
+    if (!allValid) {
+        alert("Escriba letras en el formulario de Nombre");
+        formulario.nombre.focus();
+        return false;
+    }
 }
