@@ -9,7 +9,7 @@ function validar(formulario) {
         return false
     }
 
-    var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "qwertyuiopasdfghjklñzxcvbnm";
+    var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "qwertyuiopasdfghjklñzxcvbnmé";
     var checkString = formulario.nombre.value;
     alert(checkString)
     var allValid = true;
