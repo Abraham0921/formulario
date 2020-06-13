@@ -32,4 +32,3 @@ if (!allValid) {
     formulario.nombre.focus();
     return false;
 }
-}
