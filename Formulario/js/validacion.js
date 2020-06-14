@@ -72,7 +72,7 @@ function validar(formulario) {
         return false
     }
     var fecha = formulario.fecha.value;
-    var y = fecha.substring(0, fecha.lastIndexOf("-") - 6);
+    var y = fecha.substring(0, fecha.lastIndexOf("-") - 3);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var day = fecha.substring(fecha.lastIndexOf("-") + 1);
     alert("año:" + y)
