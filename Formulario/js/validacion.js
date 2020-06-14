@@ -71,8 +71,9 @@ function validar(formulario) {
         formulario.correo.focus();
         return false
     }
-    var fecha = formulario.fecha.value.getDay();
-    alert("dia:" + fecha)
+    var fecha = formulario.fecha.value;
+    var my = fecha.substring(0, fecha.lastIndexOf("-"));
+    alert("dia:" + my)
     var txt = formulario.correo.value;
     //expresion regular
     var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/
