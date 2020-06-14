@@ -74,10 +74,12 @@ function validar(formulario) {
     var fecha = formulario.fecha.value;
     var y = fecha.substring(0, fecha.lastIndexOf("-") - 3);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
-    var day = fecha.substring(fecha.lastIndexOf("-") + 1);
+    var d = fecha.substring(fecha.lastIndexOf("-") + 1);
+    mes = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12];
+
     alert("año:" + y)
     alert("mes:" + m)
-    alert("dia:" + day)
+    alert("dia:" + d)
     var txt = formulario.correo.value;
     //expresion regular
     var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/
