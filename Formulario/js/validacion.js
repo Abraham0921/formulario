@@ -1,6 +1,7 @@
 // version 4 java script
 function validar(formulario) {
-
+    var fecha = formulario.fecha.value;
+    alert("Fecha:" + fecha)
     if (formulario.nombre.value.length < 3) {
         alert("Escriba por lo menos 3 carcateres en el campo de nombre");
         //focus nos ayuda  alocalizar donde esta el error del llenado
@@ -81,4 +82,7 @@ function validar(formulario) {
     alert("Email:" + (b.test(txt) ? "" : "no") + "valido");
     // si b.test(txt) "" es verdadero : sino "no" falso
     return b.test(txt);
+
+
+
 }
