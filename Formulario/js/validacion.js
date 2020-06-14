@@ -72,10 +72,10 @@ function validar(formulario) {
         return false
     }
     var fecha = formulario.fecha.value;
-    var my = fecha.substring(0, fecha.lastIndexOf("-"));
-    var m = fecha.substring(1, fecha.lastIndexOf("-"));
+    var y = fecha.substring(0, fecha.lastIndexOf("-"));
+    var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var day = fecha.substring(fecha.lastIndexOf("-") + 1);
-    alert("dia:" + my)
+    alert("dia:" + y)
     alert("dia:" + m)
     alert("dia:" + day)
     var txt = formulario.correo.value;
