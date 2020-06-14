@@ -78,7 +78,7 @@ function validar(formulario) {
         //ejemplo@ejemplo.ejemplo
         // todo lo que esta adentro de los [] es la expresion
         //para la creacion de curp, una llave compartida
-    alert("Email " + (b.test(txt) ? "" : "no") + "valido")
-        // si b.test(txt) "" es verdadero : sino "no" falso
+    alert("Email:" + (b.test(txt) ? "" : "no") + "valido");
+    // si b.test(txt) "" es verdadero : sino "no" falso
     return b.test(txt);
 }
