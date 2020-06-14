@@ -72,11 +72,11 @@ function validar(formulario) {
         return false
     }
     var fecha = formulario.fecha.value;
-    var y = fecha.substring(0, fecha.lastIndexOf("-"));
+    var y = fecha.substring(0, fecha.lastIndexOf("-") - 6);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var day = fecha.substring(fecha.lastIndexOf("-") + 1);
-    alert("dia:" + y)
-    alert("dia:" + m)
+    alert("año:" + y)
+    alert("mes:" + m)
     alert("dia:" + day)
     var txt = formulario.correo.value;
     //expresion regular
