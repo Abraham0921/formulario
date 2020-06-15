@@ -75,13 +75,16 @@ function validar(formulario) {
     var y = fecha.substring(0, fecha.lastIndexOf("-") - 3);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var d = fecha.substring(fecha.lastIndexOf("-") + 1);
-    // Verificación de año bisiesto (true/false) (limitado a rango 1900..2100)
+
 
     alert("año:" + y)
     alert("mes:" + m)
     alert("dia:" + d)
-
-    alert("el años bisiesto es: " + y + "y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
+        // Verificación de año bisiesto (true/false)
+    alert("el años bisiesto es: " + y + " y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
+    //fecha es correcta
+    alert((y.getFullYear() == fecha.getFullYear() &&
+        m == fecha.getMonth()) ? true : false);
 
     var txt = formulario.correo.value;
     //expresion regular
@@ -90,7 +93,7 @@ function validar(formulario) {
         //ejemplo@ejemplo.ejemplo
         // todo lo que esta adentro de los [] es la expresion
         //para la creacion de curp, una llave compartida
-    alert("Email:" + (b.test(txt) ? "" : "no") + "valido");
+    alert("Email: " + (b.test(txt) ? "" : "no") + "valido");
     // si b.test(txt) "" es verdadero : sino "no" falso
     return b.test(txt);
 
