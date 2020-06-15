@@ -81,7 +81,7 @@ function validar(formulario) {
     alert("mes:" + m)
     alert("dia:" + d)
 
-    alert("el años bisiesto es: " (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
+    alert("el años bisiesto es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
 
     var txt = formulario.correo.value;
     //expresion regular
