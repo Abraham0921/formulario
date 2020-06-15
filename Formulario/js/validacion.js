@@ -86,9 +86,8 @@ function validar(formulario) {
     var anoNum = parseInt(y, 10);
     var mesNum = parseInt(m, 10) - 1;
     var diaNum = parseInt(d, 10);
-    if ((anoNum < 1900) || (anoNum > 2100)) return false;
     var fechaAno = new Date(anoNum, 1, 1); // Para tener el año a 4 dígitos
-    var fechaDate = new Date(anoNum, mesNum, diaNum); // Paso a fmt fecha
+    var fechaDate = new Date(y, m, d); // Paso a fmt fecha
     alert((fechaAno.getFullYear() == fechaDate.getFullYear() &&
         mesNum == fechaDate.getMonth()) ? true : false);
 
