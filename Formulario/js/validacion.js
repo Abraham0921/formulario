@@ -75,11 +75,17 @@ function validar(formulario) {
     var y = fecha.substring(0, fecha.lastIndexOf("-") - 3);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var d = fecha.substring(fecha.lastIndexOf("-") + 1);
-    mes = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12];
+    // Verificación de año bisiesto (true/false) (limitado a rango 1900..2100)
 
     alert("año:" + y)
     alert("mes:" + m)
     alert("dia:" + d)
+
+    function bisiesto(y) {
+        if ((y < 1900) || (y > 2100)) return false;
+        return (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
+    }
+
     var txt = formulario.correo.value;
     //expresion regular
     var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/
