@@ -83,8 +83,14 @@ function validar(formulario) {
         // Verificación de año bisiesto (true/false)
     alert("el años bisiesto es: " + y + " y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
     //fecha es correcta
-    alert((y.getFullYear() == fecha.getFullYear() &&
-        m == fecha.getMonth()) ? true : false);
+    var anoNum = parseInt(y, 10);
+    var mesNum = parseInt(m, 10) - 1;
+    var diaNum = parseInt(d, 10);
+    if ((anoNum < 1900) || (anoNum > 2100)) return false;
+    var fechaAno = new Date(anoNum, 1, 1); // Para tener el año a 4 dígitos
+    var fechaDate = new Date(anoNum, mesNum, diaNum); // Paso a fmt fecha
+    alert((fechaAno.getFullYear() == fechaDate.getFullYear() &&
+        mesNum == fechaDate.getMonth()) ? true : false);
 
     var txt = formulario.correo.value;
     //expresion regular
