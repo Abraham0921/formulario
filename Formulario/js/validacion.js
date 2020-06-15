@@ -81,10 +81,10 @@ function validar(formulario) {
     alert("mes:" + m)
     alert("dia:" + d)
 
-    function bisiesto(y) {
-        if ((y < 1900) || (y > 2100)) return false;
-        return (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
-    }
+
+    if ((y < 1900) || (y > 2100)) alert("false");
+    alert((((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
+
 
     var txt = formulario.correo.value;
     //expresion regular
