@@ -88,8 +88,8 @@ function validar(formulario) {
     var diaNum = parseInt(d, 10);
     var fechaAno = new Date(anoNum, 1, 1); // Para tener el año a 4 dígitos
     var fechaDate = new Date(y, m, d); // Paso a fmt fecha
-    alert((fechaAno.getFullYear() == fechaDate.getFullYear() &&
-        mesNum == fechaDate.getMonth()) ? true : false);
+    alert((y.getFullYear() == fechaDate.getFullYear() &&
+        m == fechaDate.getMonth()) ? true : false);
 
     var txt = formulario.correo.value;
     //expresion regular
