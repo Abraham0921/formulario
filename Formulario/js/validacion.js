@@ -82,9 +82,9 @@ function validar(formulario) {
     alert("dia:" + d)
         // Verificación de año bisiesto (true/false)
     alert("el años bisiesto es: " + y + " y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
-    //var fechaAno = new Date(y, 1, 1); // Para tener el año a 4 dígitos
+    var fevchaAño = new Date(y, 1, 1); // Para tener el año a 4 dígitos
     var formatoFecha = new Date(y, m, d); // PFormato de fecha del formulario
-    alert((y.getFullYear() == formatoFecha.getFullYear() &&
+    alert((fevchaAño.getFullYear() == formatoFecha.getFullYear() &&
         m == formatoFecha.getMonth()) ? true : false);
 
     var txt = formulario.correo.value;
