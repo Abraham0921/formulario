@@ -75,17 +75,16 @@ function validar(formulario) {
     var y = fecha.substring(0, fecha.lastIndexOf("-") - 3);
     var m = fecha.substring(5, fecha.lastIndexOf("-"));
     var d = fecha.substring(fecha.lastIndexOf("-") + 1);
-
-
-    alert("año:" + y)
-    alert("mes:" + m)
-    alert("dia:" + d)
-        // Verificación de año bisiesto (true/false)
+    //alert("año:" + y)
+    //alert("mes:" + m)
+    //alert("dia:" + d)
+    // Verificación de año bisiesto (true/false)
     alert("el años bisiesto es: " + y + " y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
-    var fevchaAño = new Date(y, 1, 1); // Para tener el año a 4 dígitos
-    var formatoFecha = new Date(y, m, d); // PFormato de fecha del formulario
+    //verificar fecha
+    var fevchaAño = new Date(y, 1, 1); // Año en 4 dígitos
+    var formatoFecha = new Date(y, m, d); // Formato de fecha del form
     alert((fevchaAño.getFullYear() == formatoFecha.getFullYear() &&
-        m == formatoFecha.getMonth()) ? true : false);
+        m == formatoFecha.getMonth()) ? "Fecha Correcta" : "Fecha Incorrecta");
 
     var txt = formulario.correo.value;
     //expresion regular
