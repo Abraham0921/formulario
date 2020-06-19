@@ -1,9 +1,7 @@
 function valPorcentaje(formulario) {
-    if (formulario.hombres.value.length == null) {
-        alert("No deven de estar los campos vacios!");
-        //focus nos ayuda  alocalizar donde esta el error del llenado
-        //realiza un posicionamiento al elemento del formulario
-        formulario.hombres.focus();
-        return false
+    if (!allValid) {
+        alert("Escriba letras en el formulario de Nombre");
+        formulario.nombre.focus();
+        return false;
     }
 }
