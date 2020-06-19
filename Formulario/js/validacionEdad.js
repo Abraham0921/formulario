@@ -6,11 +6,21 @@ function valEdad(formulario) {
     var d = fecha.substring(fecha.lastIndexOf("-") + 1);
     var fevchaAño = new Date(y, 1, 1); // Año en 4 dígitos
     var formatoFecha = new Date(y, m, d); // Formato de fecha del form
-    alert((fevchaAño.getFullYear() == formatoFecha.getFullYear() &&
-        m == formatoFecha.getMonth()) ? "Fecha Correcta" : "Fecha Incorrecta");
 
-    if (formulario.fecha.value == null) {
-        alert('El campo no debe de estar vasio');
+    var fechaNace = new Date(formatoFecha);
+    var fechaActual = new Date()
 
-    }
+    var mes = fechaActual.getMonth();
+    var dia = fechaActual.getDate();
+    var año = fechaActual.getFullYear();
+
+    fechaActual.setDate(dia);
+    fechaActual.setMonth(mes);
+    fechaActual.setFullYear(año);
+
+    edad = Math.floor(((fechaActual - fechaNace) / (1000 * 60 * 60 * 24) / 365));
+
+    alert("La edad es: " + edad);
+
+
 }

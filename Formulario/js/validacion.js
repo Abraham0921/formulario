@@ -79,7 +79,7 @@ function validar(formulario) {
     //alert("mes:" + m)
     //alert("dia:" + d)
     // Verificación de año bisiesto (true/false)
-    alert("el años es: " + y + " y es: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
+    alert("el años es: " + y + " si es bisisiesto true/false: " + (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)));
     //verificar fecha
     var fevchaAño = new Date(y, 1, 1); // Año en 4 dígitos
     var formatoFecha = new Date(y, m, d); // Formato de fecha del form
