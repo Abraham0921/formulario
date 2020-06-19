@@ -1,5 +1,4 @@
 function valPorcentaje(formulario) {
-    var allValid = true;
     if (formulario.hombres.value.length < 3) {
         alert("Escriba por lo menos 3 carcateres en el campo de nombre");
         formulario.hombres.focus();
