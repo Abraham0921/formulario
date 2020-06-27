@@ -12,5 +12,5 @@ function problema1() {
         p1_res += palabra;
     });
     //imprimimos el resultado final
-    document.querySelector.('#p1-output').textContent = p1_res;
+    document.querySelector('#p1-output').textContent = p1_res;
 }
