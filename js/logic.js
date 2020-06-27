@@ -48,3 +48,42 @@ function problema2() {
     }
     document.querySelector('#p2-output').textContent = "Producto escalar minimo" + p2_producto;
 }
+
+function problem3() {
+    //definir el alfabeto
+    var alfabeto = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+        'A', 'S', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'Ñ',
+        'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+    ];
+    //obtenemos los elemenots del input y lo separamos por comas
+    var p3_input = document.querySelector('#p3_input').value;
+    var p3_palabras = p3_input.split(',');
+    //eleminar espacios en blanco
+    p3_palabras = p3_palabras.map(function(palabra) {
+        return palabra.replace(/\s/g, '').toUpperCase();
+    });
+    //calcular cuantos caracteres conicos tenemos
+    var p3_res = '';
+    //iterar dentro de la palabra
+    p3_palabras.forEach(function(palabra, i) {
+        //separar la palbara actual del array y vamos obtener lo que hay en dicha palabra
+        var letras_unicas = [];
+        var palabras_array = palabra.split('');
+        //iteramos por el alfabeto
+        alfabeto.forEach(function(letra, j) {
+            //iteramos sobre la palabra para obetener cada elemento
+            palabra_array.forEach(function(letra_palabra, k) {
+                //la palabra esta adentro del alfabeto
+                if (letra_palabra == letra) {
+                    //si la letra no la hemos enocntrado la agregamos al array pars contar las letras unicas
+                    if (letras_unicas.indexOf(letra) < 0) {
+                        letras_unicas.push(letra);
+                    }
+                }
+            });
+        });
+        p3_res += 'Palabra ' + palraba + ' = ' + 'Letras unicas: ' + letras_unicas.length + '\n';
+    })
+    document.querySelector('#p3-output').textContent = p3_res;
+
+}
