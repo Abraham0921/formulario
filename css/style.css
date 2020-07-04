@@ -1,10 +1,10 @@
 * {
-    background-color: #AADDFF;
-    font-size: Verdana;
-    padding: 0;
+    background-color: #b5b6e0;
+    font-size: Arial;
+    padding: 4;
 }
 
-p {
-    font-size: 16px;
-    color: darkgreen;
+table {
+    font-size: 22px;
+    color: #41209c;
 }

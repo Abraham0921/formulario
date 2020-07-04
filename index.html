@@ -6,28 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script language="javascript" type="text/javascript" src="js/validacion.js"></script>
-    <title>Formulario</title>
+    <title>Examen</title>
 </head>
 
 <body>
-    <p>Formulario de Registros Basicos</p>
-    <h1>Favor de Llenar el Formulario</h1>
-    <form action="" method="get" name="formulario" onsubmit="return validar(this)">
-        <br> Nombre: <input type="text" name="nombre" size="20">
-        <br> Edad: <input type="number" min="00" max="99" name="edad">
-        <br> Email: <input type="email" name="correo" size="30">
-        <br> Fecha: <input type="date" name="fecha" min="1900-01-01" max="2020-12-31">
+    <form action="" method="post" name="formulario" onsubmit="return ventas(this)">
         <br>
-        <A href="porcentaje.html">Porcentaje de hombre y mujeres de un grupo</A>
-        <br>
-        <A href="edad.html">Edad de una Persona</A>
-        <br>
-        <A href="funciones.html">Pagina de Funciones</A>
-        <br>
-        <A href="algoritmia.html">Algoritmia</A>
-        <br>
-        <input type="submit" value="Enviar Datos" name="enviar">
-        <input type="reset" value="Borrar Datos" name="borrar">
+        <table align="center" border="1">
+            <tr>
+                <td>
+                    <br>El salario base no puede rebasar mas de los $10,000..
+                    <br>Ingresar salario base: <input type="number" min="00" max="10000" name="salario">
+                </td>
+                <tr>
+                    <td>
+                        <input type="submit" value="Enviar Datos" name="enviar">
+                    </td>
+                </tr>
+            </tr>
+        </table>
     </form>
 </body>
 
