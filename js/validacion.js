@@ -19,10 +19,6 @@ function ventas() {
         formulario.salrio.focus();
         return false;
     }
-    //no acepta -1
-    if (salario >= 1) {
-        alert('no es positivo')
-    }
     //no acepta mas de dos punto
     var decExp = /^[1-9]\d*(\.\d+)?$/
     if (!decExp.test(salario)) {
