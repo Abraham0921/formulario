@@ -19,11 +19,6 @@ function ventas() {
         formulario.salrio.focus();
         return false;
     }
-    //no acepta mas de dos punto
-    var decExp = /^[1-9]\d*(\.\d+)?$/
-    if (!decExp.test(salario)) {
-        alert('Ese valor no esta permitido')
-    }
 
 
 
